@@ -1,0 +1,108 @@
+/* Estilos básicos para o footer */
+.footer {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    padding: 50px 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+.footer-col {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-col h3 {
+    color: #00ffcc;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #00ffcc;
+}
+
+/* Redes Sociais */
+.social-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.social-links li a {
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #00ffcc;
+}
+
+/* Contato ícones */
+.footer-col p i {
+    margin-right: 10px;
+    color: #00ffcc;
+}
+
+/* Informações Legais */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #111;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.footer-bottom a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 40px;
+    }
+}

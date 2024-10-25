@@ -1,0 +1,346 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Variáveis de cores */
+:root {
+    --cor-fundo: #021526;
+    --cor-cabecalho: #000;
+    --cor-letras: #F1F1F1;
+    --cor-hover: #21209C;
+    --gradiente-radial: radial-gradient(circle, black, blue);
+    --gradiente-linear-principal: linear-gradient(to bottom, var(--cor-fundo), #000000);
+}
+
+/* Estilo do corpo */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--gradiente-linear-principal);
+    border-radius: 20px;
+}
+
+/* Navbar e cabeçalho */
+header {
+    margin: 20px;
+}
+
+.navbar {
+    background-color: transparent; /* Fundo transparente */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    justify-content: center; /* Centraliza a navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+}
+
+.navbar-logo a {
+    color: var(--cor-letras);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre os itens do menu */
+}
+
+.navbar-lista .buttonaa {
+    font-size: 1rem;
+    color: #fff; /* Cor branca para contraste */
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 50px; /* Botões mais suaves e arredondados */
+}
+
+.navbar-lista .buttonaa:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efeito hover sutil */
+    color: #00ffcc; /* Cor de destaque */
+}
+
+.navbar-lista .buttonaa:active {
+    color: #2980b9; /* Cor de clique */
+}
+
+.navbar-logo {
+    margin: 0 60px; /* Espaçamento ao redor do logo */
+}
+
+
+
+.navbar-logo a {
+    font-size: 1.5rem;
+    color: #fff; /* Cor branca para contraste */
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding: 10px 0; /* Espaçamento interno do logo */
+}
+
+.navbar-logo a:hover {
+    color: #00ffcc; /* Cor de destaque para o logo */
+}
+
+@media (max-width: 768px) {
+    .navbar-lista li:not(.navbar-logo):nth-child(2),  /* Oculta "Sobre" */
+    .navbar-lista li:not(.navbar-logo):nth-child(5) { /* Oculta "Contato" */
+        display: none;
+       }
+    .navbar-lista {
+        margin-right: 30px;
+
+    }
+    
+    }
+
+
+
+
+/* Botões */
+.buttona {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: var(--cor-letras);
+    border: 2px solid #00ffcc;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    animation: fadeInCascade 4s ease forwards;
+    opacity: 0;
+}
+
+.buttona:hover {
+    background-color: #2980b9;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.buttona:active {
+    transform: translateY(2px);
+}
+
+/* Página inicial com background animado */
+.Pagina-inicial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/Photograph\ \(1\).webp); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 110vh;
+    animation: bounceBackground 4s ease-in-out infinite; /*animação balançado*/
+}
+
+
+
+/* Estilo dos textos */
+.Textos-Pagina-inicial {
+    color: var(--cor-letras);
+    text-align: center;
+    padding: 20px;
+ 
+}
+
+.Texto-principal {
+    font-size: 48px;
+    font-weight: 700px;
+    margin-bottom: 20px;
+    animation: fadeInCascade 2s ease forwards;
+    opacity: 0;
+    color: white;
+}
+
+.Texto-secundario {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    animation: fadeInCascade 3s ease forwards;
+    opacity: 0;
+    color: white;
+}
+
+/* Página Secundária */
+.Pagina-secundaria {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/Polaroid\ analog-style\ photography\ of\ a\ cyborg\ meti.webp); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    animation: bounceBackground 4s ease-in-out infinite; /*animação balançado*/
+
+}
+
+
+
+
+
+
+@media (min-width: 100px) {
+    
+    .Pagina-secundaria {
+        min-height: 130vh;
+
+    }
+}
+
+
+
+/* Página Terciária */
+.Pagina-terciaria {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-image: url(/img/Greek\ marble\ statues\ sitting\ in\ a\ very\ crowded\ sub.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Estilos da Lista de Filmes */
+.robot-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+}
+
+@media (max-width: 600px) {
+    
+    .robot-section ul {
+        flex-wrap: wrap; /* Mantém os itens em uma única linha */
+        scroll-behavior: smooth; /* Rolagem suave */
+        
+    }
+    .robot-item {
+        max-width: 150px;
+    }
+
+}
+
+
+
+
+
+.robot-list ul {
+    display: flex;
+    display: flex;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 10px;
+}
+
+.robot-item {
+    background-color: wheat;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.robot-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 5px 4px 6px rgb(0, 0, 0);
+    animation: float 4s ease-in-out infinite;
+   
+}
+
+.robot-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    transition: color 0.3s ease;
+    color: #21209C;
+}
+
+.robot-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 10px 10px;
+    transition: color 0.3s ease;
+}
+
+.robot-item:hover p {
+    color: #120549;
+    
+
+}
+.robot-item:hover img {
+    scale: 120%;  
+    transition: 2s;
+    cursor: pointer;
+}
+
+
+@keyframes bounceBackground {
+    0% {
+        background-position: center 0;
+    }
+    50% {
+        background-position: center 10px;
+    }
+    100% {
+        background-position: center 0;
+    }
+}
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeInCascade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
